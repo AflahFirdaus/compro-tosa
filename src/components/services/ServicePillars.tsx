@@ -4,14 +4,14 @@ import styles from './ServicePillars.module.css';
 export default function ServicePillars() {
   return (
     <div className={styles.wrapper}>
-      {/* Pillar 1: Civil Engineering — Clean White Canvas */}
+      {/* Pillar 1: Civil Engineering & Supplier — Clean White Canvas */}
       <section className={styles.pillarSectionWhite}>
         <div className={styles.container}>
           <div className={styles.pillarHeader}>
             <span className={styles.eyebrow}>PILAR LAYANAN 01</span>
-            <h2 className={styles.title}>Civil Engineering</h2>
+            <h2 className={styles.title}>Civil Engineering &amp; Supplier</h2>
             <p className={styles.subtitle}>
-              Konstruksi dan infrastruktur industri yang dibangun dengan presisi teknis, ketahanan struktural tinggi, dan kepatuhan penuh terhadap standar keselamatan K3.
+              Layanan rekayasa konstruksi, perancangan arsitektur, struktur baja, mekanikal elektrikal, perpipaan industri, tata udara ducting, dan renovasi infrastruktur pabrik manufaktur.
             </p>
           </div>
 
@@ -23,20 +23,31 @@ export default function ServicePillars() {
                   <h3 className={styles.cardTitle}>{service.title}</h3>
                 </div>
                 <p className={styles.cardDesc}>{service.desc}</p>
+
+                {service.subItems && (
+                  <ul className={styles.subList}>
+                    {service.subItems.map((sub) => (
+                      <li key={sub} className={styles.subItem}>
+                        <span className={styles.subDot} aria-hidden="true" />
+                        <span>{sub}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pillar 2: Industrial Painting — Clean Parchment Canvas */}
+      {/* Pillar 2: Industrial Painting & Contractor — Clean Parchment Canvas */}
       <section className={styles.pillarSectionParchment}>
         <div className={styles.container}>
           <div className={styles.pillarHeader}>
             <span className={styles.eyebrow}>PILAR LAYANAN 02</span>
-            <h2 className={styles.title}>Industrial Painting</h2>
+            <h2 className={styles.title}>Industrial Painting &amp; Contractor</h2>
             <p className={styles.subtitle}>
-              Sistem pelapisan pelindung dan epoxy lantai industri yang melindungi aset fasilitas pabrik dari korosi kimia, abrasi mekanis, kelembapan, dan bahaya api.
+              Spesialis pelapisan lantai epoxy self-leveling &amp; food grade, protective coating anti-karat, cat atap peredam panas, waterproofing FRP membran, marka jalan K3, dan floor cleaning.
             </p>
           </div>
 
@@ -48,6 +59,17 @@ export default function ServicePillars() {
                   <h3 className={styles.cardTitle}>{service.title}</h3>
                 </div>
                 <p className={styles.cardDesc}>{service.desc}</p>
+
+                {service.subItems && (
+                  <ul className={styles.subList}>
+                    {service.subItems.map((sub) => (
+                      <li key={sub} className={styles.subItem}>
+                        <span className={styles.subDot} aria-hidden="true" />
+                        <span>{sub}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>

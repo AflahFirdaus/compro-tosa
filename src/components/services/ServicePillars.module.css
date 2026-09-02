@@ -68,7 +68,7 @@
   border: 1px solid var(--clr-hairline, #e0e0e0);
   border-left: 3px solid var(--clr-accent-red, #d32f2f);
   border-radius: 18px;
-  padding: 32px 26px;
+  padding: 30px 24px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
@@ -84,9 +84,9 @@
 
 .cardHeader {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .stepBadge {
@@ -98,7 +98,7 @@
   padding: 4px 9px;
   border-radius: 7px;
   flex-shrink: 0;
-  font-feature-settings: "tnum";
+  margin-top: 2px;
 }
 
 .cardTitle {
@@ -116,8 +116,39 @@
 
 .cardDesc {
   font-size: 14px;
-  color: var(--clr-ink-muted-80, #333333);
-  line-height: 1.65;
+  color: var(--clr-ink-muted-80, #475569);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.subList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 14px;
+}
+
+.subItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #334155;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.subDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--clr-action-blue, #0066cc);
+  flex-shrink: 0;
 }
 
 /* Responsive */

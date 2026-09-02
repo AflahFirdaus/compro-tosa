@@ -72,66 +72,147 @@ export const TESTIMONIALS = [
 export const CIVIL_SERVICES = [
   {
     step: '01',
-    title: 'Steel Construction',
-    desc: 'Fabrikasi dan instalasi struktur baja untuk bangunan industri, gudang, dan fasilitas pabrik manufaktur skala besar.',
+    title: 'Civil Engineering, Architects & Planners',
+    desc: 'Perencanaan arsitektur terpadu, master planning tata letak fasilitas pabrik, kalkulasi beban struktural, dan rekayasa sipil bangunan industri.',
+    subItems: [
+      'Architectural Design & 3D Planning',
+      'Struktur Gedung & Fasilitas Pabrik',
+      'Penyusunan RAB & Gambar Kerja Teknis',
+    ],
   },
   {
     step: '02',
-    title: 'MEP (Mekanikal, Elektrikal & Plumbing)',
-    desc: 'Sistem MEP terintegrasi untuk fasilitas produksi, termasuk HVAC, instalasi kelistrikan daya, dan sistem utilitas pabrik.',
+    title: 'Steel Construction (Konstruksi Baja)',
+    desc: 'Fabrikasi dan ereksi konstruksi rangka baja WF/H-Beam, truss atap, gudang logistik, mezzanine, pipe rack, dan kanopi pabrik berstandar AISC.',
+    subItems: [
+      'Fabrikasi Struktur Baja Berat & WF/H-Beam',
+      'Pembangunan Gudang Logistik & Mezzanine',
+      'Ereksi Rangka Atap & Truss Pabrik',
+    ],
   },
   {
     step: '03',
-    title: 'Piping System',
-    desc: 'Instalasi dan perawatan sistem perpipaan industri: compressed air, steam lines, chilled water, dan chemical lines.',
+    title: 'Mechanical – Electrical (Sistem MEP)',
+    desc: 'Instalasi sistem kelistrikan daya pabrik, panel distribusi MDP/SDP, trafo, instalasi penerangan industri, kabel tray, dan grounding.',
+    subItems: [
+      'Panel Distribusi Listrik & Trafo',
+      'Sistem Grounding & Proteksi Petir',
+      'Instalasi Kelistrikan Daya & Penerangan Pabrik',
+    ],
   },
   {
     step: '04',
-    title: 'Boiler Installation',
-    desc: 'Pemasangan, commissioning, dan pemeliharaan boiler industri berkapasitas besar sesuai regulasi keselamatan standar ASME dan SNI.',
+    title: 'Pemipaan (Piping System Industri)',
+    desc: 'Instalasi dan perbaikan sistem perpipaan industri: steam lines tekanan tinggi, compressed air, chilled water, chemical & gas line.',
+    subItems: [
+      'Pipa Steam & Compressed Air Bertekanan',
+      'Chilled Water & Cooling Tower Piping',
+      'Header Pump Room & Repair Flow System',
+    ],
   },
   {
     step: '05',
-    title: 'Concrete Polishing',
-    desc: 'Poles lantai beton menggunakan teknologi diamond grinding untuk hasil akhir lantai kilap, bebas debu, dan tahan beban berat.',
+    title: 'Ducting & AC Sistem (Industrial HVAC)',
+    desc: 'Pabrikasi dan pemasangan ducting sirkulasi udara, exhaust fan, Air Handling Unit (AHU), dan pendingin AC sistem pabrik.',
+    subItems: [
+      'Pabrikasi & Instalasi Ducting BJLS/PIR',
+      'Industrial HVAC & AC Central Pabrik',
+      'Exhaust System & Air Ventilation',
+    ],
   },
   {
     step: '06',
-    title: 'Civil Renovation',
-    desc: 'Renovasi dan perbaikan struktural fasilitas pabrik termasuk lantai, dinding panel, atap, saluran air, dan area utilitas.',
+    title: 'Boiler Installation & Commissioning',
+    desc: 'Pemasangan, pemipaan header, commissioning, dan pemeliharaan boiler uap industri berkapasitas besar sesuai standar keselamatan ASME & SNI.',
+    subItems: [
+      'Instalasi & Commissioning Boiler Pabrik',
+      'Hydrotest & Uji Sertifikasi Kelayakan',
+      'Pemipaan Steam Header & Valve Kontrol',
+    ],
+  },
+  {
+    step: '07',
+    title: 'Concrete Polishing (Poles Beton & Liquid Hardener)',
+    desc: 'Poles lantai beton menggunakan teknologi diamond grinding dengan aplikasi chemical liquid hardener untuk lantai kilap, keras, dan bebas debu.',
+    subItems: [
+      'Diamond Grinding Polishing Tahap Bertingkat',
+      'Aplikasi Chemical Liquid Floor Hardener',
+      'Lantai Kilap Glossy, Tahan Beban & Anti Debu',
+    ],
+  },
+  {
+    step: '08',
+    title: 'Civil Renovation & Infrastruktur Pabrik',
+    desc: 'Renovasi fasilitas produksi, rigid pavement jalan pabrik, drainase U-ditch, sumur resapan, paving block, cladding, dan loading dock.',
+    subItems: [
+      'Re-Concrete & Pengecoran Jalan Utama Pabrik',
+      'Drainase U-Ditch & Pembuatan Sumur Resapan',
+      'Pemasangan Cladding Dinding, Atap & Gypsum',
+    ],
   },
 ];
 
 export const PAINTING_SERVICES = [
   {
     step: '01',
-    title: 'Epoxy Floor Coating',
-    desc: 'Pelapisan lantai epoxy self-leveling dan mortar untuk area produksi, cleanroom, dan warehouse logistik tahan zat kimia.',
+    title: 'Epoxy Floor Coating / Epoxy Lantai',
+    desc: 'Pelapisan lantai epoxy bermutu tinggi untuk lantai area produksi manufaktur, warehouse logistik, cleanroom farmasi, dan laboratorium.',
+    subItems: [
+      'Epoxy Coating & Roll System',
+      'Epoxy Self-Leveling & Heavy Duty Mortar',
+      'Food Grade (Anti-Bakteri Standar GMP & HACCP)',
+      'Chemical Resistance (Kuat Bahan Kimia, Asam & Basa)',
+    ],
   },
   {
     step: '02',
-    title: 'Protective & Anti-Corrosion Coating',
-    desc: 'Sistem pelapisan pelindung anti-karat untuk struktur baja, tangki penyimpanan, dan fasilitas pipa industri.',
+    title: 'Protective Coating & Roof Coating',
+    desc: 'Sistem pelapisan pelindung anti-karat untuk struktur baja, tangki kimia, cerobong, dan cat penolak panas atap pabrik.',
+    subItems: [
+      'Maintenance & Anti-Corrosion (Baja, Tangki & Pipa)',
+      'Roof Coating Peredam Panas (Heat-Reflective & Anti Bocor)',
+      'Intumescent Fireproof Coating (Cat Tahan Api Pasif)',
+    ],
   },
   {
     step: '03',
-    title: 'Decorative Painting',
-    desc: 'Pengecatan arsitektural dan dekoratif untuk gedung perkantoran, lobi, showroom, dan fasilitas komersial.',
+    title: 'Decorative Coating (Pengecatan Dinding)',
+    desc: 'Pengecatan arsitektural dan dekoratif untuk gedung perkantoran pabrik, lobi, koridor, dan dinding fasade luar gedung.',
+    subItems: [
+      'Eksterior: Weather-Shield, Anti Jamur & UV Protection',
+      'Interior: Cat Ramah Lingkungan Low VOC untuk Kantor & Lobi',
+      'Pengecatan Gedung Pabrik & Fasilitas Komersial',
+    ],
   },
   {
     step: '04',
-    title: 'Waterproofing System',
-    desc: 'Sistem membran dan coating kedap air untuk atap dak beton, basement, wet process area, dan talang pabrik.',
+    title: 'Waterproofing System (FRP, Membran & Coating)',
+    desc: 'Sistem kedap air komprehensif untuk atap dak beton, talang, basement, serta pelapisan FRP lining untuk bak penampungan cairan kimia.',
+    subItems: [
+      'FRP Lining Bak Kimia & Kolam STP/WWTP',
+      'Waterproofing Membran Bakar & Membran Cair',
+      'Proteksi Kebocoran Dak Beton & Talang Pabrik',
+    ],
   },
   {
     step: '05',
-    title: 'Industrial Painting',
-    desc: 'Pengecatan berkala untuk gedung pabrik, cerobong, gantri crane, dan mesin industri dengan sistem multi-coat.',
+    title: 'Road Marking / Marka Jalan & Rambu K3',
+    desc: 'Pengecatan marka jalan pabrik, marka jalur pedestrian pejalan kaki, lintasan forklift/AGV, dan rambu keselamatan kerja standar K3.',
+    subItems: [
+      'Marka Jalur Forklift & Jalur Pejalan Kaki (Pedestrian)',
+      'Zonasi Area Aman & Penandaan Standar K3',
+      'Cat Thermoplastic & Cold Plastic Khusus Lalu Lintas Pabrik',
+    ],
   },
   {
     step: '06',
-    title: 'Intumescent Fireproof Coating',
-    desc: 'Pelapisan cat tahan api pasif pada struktur baja guna memenuhi sertifikasi proteksi kebakaran standar fire rating gedung.',
+    title: 'Concrete Floor Wax & Cleaning Floor',
+    desc: 'Layanan pembersihan kerak lantai industri, stripping, pemolesan wax lantai beton/vinyl, dan pemeliharaan kebersihan lantai berkala.',
+    subItems: [
+      'Concrete Floor Waxing & Sealing Proteksi',
+      'Deep Cleaning & Degreasing Kerak Oli Industri',
+      'Program Pemeliharaan Berkala Kebersihan Lantai Pabrik',
+    ],
   },
 ];
 
