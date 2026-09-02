@@ -1,0 +1,298 @@
+.section {
+  background: var(--clr-parchment, #f5f5f7);
+  padding: 100px 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--clr-action-blue, #0066cc);
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 800;
+  color: var(--clr-ink, #1d1d1f);
+  letter-spacing: -0.4px;
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--clr-ink-muted-48, #7a7a7a);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* Numbered Sidebar Tabs */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: sticky;
+  top: 90px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: var(--clr-white, #ffffff);
+  border: 1px solid var(--clr-hairline, #e0e0e0);
+  border-radius: 14px;
+  cursor: pointer;
+  outline: none;
+  text-align: left;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  background: #fbfbfd;
+  border-color: #c8c8cc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.tabActive {
+  background: var(--clr-white, #ffffff);
+  border-color: var(--clr-hairline, #e0e0e0);
+  border-left: 3px solid var(--clr-accent-red, #d32f2f);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.tabNum {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--clr-ink-muted-48, #7a7a7a);
+  letter-spacing: 0.5px;
+  font-feature-settings: "tnum";
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #f0f0f4;
+  transition: all 0.2s ease;
+}
+
+.tabActive .tabNum {
+  background: rgba(211, 47, 47, 0.1);
+  color: var(--clr-accent-red, #d32f2f);
+}
+
+.tabLabel {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--clr-ink, #1d1d1f);
+  flex: 1;
+  letter-spacing: -0.1px;
+}
+
+.tabActive .tabLabel {
+  color: var(--clr-action-blue, #0066cc);
+  font-weight: 700;
+}
+
+.tabArrow {
+  color: var(--clr-ink-muted-48, #7a7a7a);
+  opacity: 0.35;
+  transition: all 0.2s ease;
+}
+
+.tabActive .tabArrow {
+  opacity: 1;
+  color: var(--clr-action-blue, #0066cc);
+  transform: translateX(2px);
+}
+
+/* Panel */
+.panel {
+  background: var(--clr-white, #ffffff);
+  border-radius: 20px;
+  padding: 44px 40px;
+  border: 1px solid var(--clr-hairline, #e0e0e0);
+  border-top: 3px solid var(--clr-accent-red, #d32f2f);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+  animation: panelIn 0.25s ease-out;
+  min-height: 380px;
+}
+
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f4;
+}
+
+.panelSectionTag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--clr-action-blue, #0066cc);
+  margin-bottom: 6px;
+}
+
+.panelTitle {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--clr-ink, #1d1d1f);
+  letter-spacing: -0.4px;
+}
+
+.panelContent {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.panelHeadline {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--clr-ink, #1d1d1f);
+  letter-spacing: -0.2px;
+  line-height: 1.5;
+  padding: 14px 18px;
+  background: rgba(211, 47, 47, 0.04);
+  border-left: 3px solid var(--clr-accent-red, #d32f2f);
+  border-radius: 0 8px 8px 0;
+}
+
+/* Visi-Misi Split Grid */
+.visiMisiGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.visiMisiCard {
+  background: var(--clr-parchment, #f5f5f7);
+  border: 1px solid var(--clr-hairline, #e0e0e0);
+  border-left: 3px solid var(--clr-accent-red, #d32f2f);
+  border-radius: 16px;
+  padding: 28px 24px;
+}
+
+.visiMisiLabel {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--clr-ink, #1d1d1f);
+  margin-bottom: 14px;
+  letter-spacing: -0.1px;
+}
+
+.visiMisiText {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--clr-ink-muted-80, #333333);
+}
+
+/* Clean Point List */
+.pointList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.point {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--clr-ink-muted-80, #333333);
+}
+
+.pointIndex {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--clr-accent-red, #d32f2f);
+  background: rgba(211, 47, 47, 0.08);
+  padding: 3px 8px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-feature-settings: "tnum";
+}
+
+.pointText {
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: static;
+  }
+  .tab {
+    flex: 1;
+    min-width: 150px;
+  }
+  .tabArrow {
+    display: none;
+  }
+  .visiMisiGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: 0 20px;
+  }
+  .section {
+    padding: 64px 0;
+  }
+  .tabs {
+    gap: 6px;
+  }
+  .tab {
+    padding: 12px 14px;
+  }
+  .tabLabel {
+    font-size: 13px;
+  }
+  .panel {
+    padding: 28px 20px;
+  }
+  .panelTitle {
+    font-size: 22px;
+  }
+}

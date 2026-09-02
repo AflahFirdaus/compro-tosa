@@ -1,0 +1,16 @@
+{
+  "name": "PT. TOTO SUKSES ABADI — Kontraktor Civil & Industrial Painting",
+  "short_name": "TOSA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0066cc",
+  "description": "Jasa Kontraktor Civil Engineering, Industrial Painting, Epoxy Flooring, dan Steel Construction untuk Fasilitas Pabrik Industri di Indonesia.",
+  "icons": [
+    {
+      "src": "/Logo-tosa.png",
+      "sizes": "80x80 192x192 512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 110px 24px 70px;
+  background: #1a1a24;
+}
+
+/* Background image & natural lighting */
+.bgWrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: brightness(0.8) contrast(1.08) saturate(1.08);
+  transform: scale(1.03);
+  animation: gentleZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes gentleZoom {
+  0%   { transform: scale(1.02) translateY(0); }
+  100% { transform: scale(1.06) translateY(-8px); }
+}
+
+/* Subtle, gentle gradient overlay so the photo stays bright and vibrant */
+.lightOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 15, 26, 0.58) 0%,
+    rgba(10, 15, 26, 0.42) 45%,
+    rgba(10, 15, 26, 0.72) 100%
+  );
+}
+
+/* Content Container */
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Text 1: Eyebrow */
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(0, 102, 204, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 18px;
+  border-radius: 9999px;
+  margin-bottom: 22px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Text 2: Main Headline */
+.title {
+  font-size: clamp(32px, 5.2vw, 56px);
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.55), 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Text 3: Concise Subtitle */
+.subtitle {
+  font-size: clamp(15px, 1.7vw, 18px);
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 34px;
+  max-width: 740px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Clean CTAs */
+.ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: 9999px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.1px;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btnPrimary {
+  background: var(--clr-action-blue, #0066cc);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 18px rgba(0, 102, 204, 0.45);
+}
+
+.btnPrimary:hover {
+  background: #0071e3;
+  box-shadow: 0 6px 24px rgba(0, 102, 204, 0.6);
+  transform: translateY(-2px);
+}
+
+.btnGhost {
+  background: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.btnGhost:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+/* Trust Badges below CTA */
+.trustBadges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.trustBadgeItem {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.trustIcon {
+  color: #4ade80;
+  flex-shrink: 0;
+}
+
+/* Scroll indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+
+.scrollChevron {
+  animation: scrollDown 2s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50%       { transform: translateY(6px); opacity: 0.9; }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .hero {
+    min-height: 85vh;
+    padding: 95px 16px 50px;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  .btn {
+    width: 100%;
+    padding: 12px 20px;
+  }
+  .ctas {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .trustBadges {
+    gap: 12px;
+    flex-direction: column;
+  }
+}

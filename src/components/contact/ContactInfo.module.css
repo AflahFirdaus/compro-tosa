@@ -1,0 +1,113 @@
+.wrapper {
+  height: 100%;
+}
+
+.card {
+  background: var(--clr-parchment, #f5f5f7);
+  border-radius: 20px;
+  padding: 36px;
+  border: 1px solid var(--clr-hairline, #e0e0e0);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--clr-ink, #1d1d1f);
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+.desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--clr-ink-muted-80, #333333);
+  margin-bottom: 32px;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.iconBox {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--clr-white, #ffffff);
+  color: var(--clr-action-blue, #0066cc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--clr-hairline, #e0e0e0);
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--clr-ink-muted-48, #7a7a7a);
+  margin-bottom: 2px;
+}
+
+.valueLink {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--clr-action-blue, #0066cc);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.valueLink:hover {
+  text-decoration: underline;
+}
+
+.value {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--clr-ink, #1d1d1f);
+  line-height: 1.4;
+}
+
+.badges {
+  border-top: 1px solid var(--clr-hairline, #e0e0e0);
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.badgeItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--clr-ink-muted-80, #333333);
+}
+
+.badgeIcon {
+  color: var(--clr-action-blue, #0066cc);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 24px;
+  }
+}

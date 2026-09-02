@@ -1,0 +1,144 @@
+.section {
+  background: var(--clr-parchment, #f5f5f7);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  padding: 0 32px;
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--clr-action-blue, #0066cc);
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 700;
+  color: var(--clr-ink, #1d1d1f);
+  letter-spacing: -0.374px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--clr-ink-muted-48, #7a7a7a);
+}
+
+/* Marquee track */
+.marqueeWrapper {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.fadeMaskLeft,
+.fadeMaskRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 160px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fadeMaskLeft {
+  left: 0;
+  background: linear-gradient(to right, var(--clr-parchment, #f5f5f7), transparent);
+}
+
+.fadeMaskRight {
+  right: 0;
+  background: linear-gradient(to left, var(--clr-parchment, #f5f5f7), transparent);
+}
+
+.marqueeTrack {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  padding: 6px 0;
+  /* Pause animation on hover for the whole row */
+}
+
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+.marqueeForward {
+  animation: marquee 40s linear infinite;
+}
+
+.marqueeReverse {
+  animation: marquee-reverse 50s linear infinite;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Client chip */
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--clr-white, #fff);
+  border: 1px solid var(--clr-hairline, #e0e0e0);
+  border-radius: 9999px;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--clr-ink-muted-80, #333);
+  letter-spacing: -0.1px;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chip:hover {
+  border-color: var(--clr-action-blue, #0066cc);
+  box-shadow: 0 2px 12px rgba(0, 102, 204, 0.1);
+}
+
+.chipDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--clr-action-blue, #0066cc);
+  flex-shrink: 0;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 32px;
+  padding: 0 32px;
+}
+
+.ctaText {
+  font-size: 14px;
+  color: var(--clr-ink-muted-48, #7a7a7a);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marqueeForward,
+  .marqueeReverse {
+    animation: none;
+  }
+  .marqueeTrack {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

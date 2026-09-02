@@ -1,0 +1,354 @@
+/* ==========================================================================
+   TOSA Design System
+   ========================================================================== */
+
+/* ── Design Tokens ── */
+:root {
+  /* Surfaces */
+  --clr-black: #000000;
+  --clr-night-soft: #0a0a0a;
+  --clr-tile-1: #111114;
+  --clr-tile-2: #18181c;
+  --clr-white: #ffffff;
+  --clr-parchment: #f5f5f7;
+  --clr-pearl: #fafafc;
+
+  /* Brand Palette: Primary White & Blue, Accent Red for list/borders */
+  --clr-action-blue: #0066cc;
+  --clr-action-blue-focus: #0071e3;
+  --clr-sky-blue: #2997ff;
+  --clr-accent-red: #d32f2f;
+  --clr-accent-red-hover: #b71c1c;
+  --clr-accent-red-subtle: rgba(211, 47, 47, 0.08);
+  --clr-accent-red-border: rgba(211, 47, 47, 0.4);
+  --clr-wa-green: #25D366;
+
+  /* Text */
+  --clr-ink: #1d1d1f;
+  --clr-ink-muted-80: #333333;
+  --clr-ink-muted-48: #7a7a7a;
+  --clr-on-dark: #ffffff;
+  --clr-on-dark-muted: #a1a1a6;
+
+  /* Borders */
+  --clr-hairline: #e0e0e0;
+  --clr-hairline-dark: #2a2a2e;
+
+  /* Typography */
+  --font-display: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Border Radius */
+  --radius-xs: 5px;
+  --radius-sm: 8px;
+  --radius-md: 11px;
+  --radius-lg: 18px;
+  --radius-pill: 9999px;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 17px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+  --space-section: 80px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-med: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.47;
+  letter-spacing: -0.374px;
+  color: var(--clr-ink);
+  background-color: var(--clr-white);
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--clr-black); }
+::-webkit-scrollbar-thumb { background: #333; border-radius: var(--radius-pill); }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* ── Typography Scale ── */
+.text-hero {
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+
+.text-display-xl {
+  font-size: clamp(28px, 4vw, 56px);
+  font-weight: 700;
+  line-height: 1.07;
+  letter-spacing: -0.28px;
+}
+
+.text-display-lg {
+  font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.text-display-md {
+  font-size: clamp(20px, 2.5vw, 34px);
+  font-weight: 600;
+  line-height: 1.47;
+  letter-spacing: -0.374px;
+}
+
+.text-lead {
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: 0.196px;
+}
+
+.text-tagline {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.19;
+  letter-spacing: 0.231px;
+}
+
+.text-body {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.47;
+  letter-spacing: -0.374px;
+}
+
+.text-body-strong {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.24;
+  letter-spacing: -0.374px;
+}
+
+.text-caption {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: -0.224px;
+}
+
+/* SpaceX uppercase display */
+.text-spacex-hero {
+  font-size: clamp(40px, 7vw, 80px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.text-spacex-xl {
+  font-size: clamp(28px, 5vw, 60px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.text-micro-cap {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 2.0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.374px;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn:active { transform: scale(0.95); }
+
+.btn-primary {
+  background: var(--clr-action-blue);
+  color: var(--clr-white);
+  border: none;
+}
+.btn-primary:hover { background: var(--clr-action-blue-focus); }
+
+.btn-ghost-dark {
+  background: transparent;
+  color: var(--clr-white);
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+}
+.btn-ghost-dark:hover { border-color: var(--clr-white); background: rgba(255,255,255,0.05); }
+
+.btn-ghost-light {
+  background: transparent;
+  color: var(--clr-action-blue);
+  border: 1.5px solid var(--clr-action-blue);
+}
+.btn-ghost-light:hover { background: rgba(0, 102, 204, 0.05); }
+
+.btn-lg {
+  padding: 16px 36px;
+  font-size: 18px;
+}
+
+/* ── Section Wrappers ── */
+.section-dark { background: var(--clr-black); color: var(--clr-white); }
+.section-night-soft { background: var(--clr-night-soft); color: var(--clr-white); }
+.section-light { background: var(--clr-white); color: var(--clr-ink); }
+.section-parchment { background: var(--clr-parchment); color: var(--clr-ink); }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.container-wide {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.section-pad {
+  padding: var(--space-section) 0;
+}
+
+/* ── Keyframe Animations ── */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+@keyframes scroll-down {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%       { transform: translateY(8px); opacity: 0.5; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+/* ── Utility Classes ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease forwards;
+}
+
+/* ── Card Styles ── */
+.card-utility {
+  background: var(--clr-white);
+  border: 1px solid var(--clr-hairline);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.card-dark {
+  background: var(--clr-tile-1);
+  border: 1px solid var(--clr-hairline-dark);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+/* ── Responsive Helpers ── */
+@media (max-width: 768px) {
+  .container, .container-wide {
+    padding: 0 var(--space-md);
+  }
+  .section-pad {
+    padding: 60px 0;
+  }
+  .btn-lg {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-pad {
+    padding: 48px 0;
+  }
+}
