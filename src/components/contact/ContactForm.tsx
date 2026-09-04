@@ -84,7 +84,7 @@ export default function ContactForm() {
     );
 
     // 4. Safe Window Open with noopener,noreferrer
-    const targetUrl = `https://wa.me/628985168658?text=${waText}`;
+    const targetUrl = `https://wa.me/6281218351002?text=${waText}`;
     window.open(targetUrl, '_blank', 'noopener,noreferrer');
 
     setSubmitted(true);

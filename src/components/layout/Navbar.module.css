@@ -6,7 +6,7 @@
   z-index: 1000;
   height: 64px;
   transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -57,14 +57,16 @@
 .links {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .link {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 8px 14px;
   font-size: 14px;
   font-weight: 500;
@@ -73,6 +75,10 @@
   text-decoration: none;
   border-radius: 9999px;
   transition: color 0.2s ease, background 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .link:hover {
@@ -86,7 +92,176 @@
   background: rgba(0, 102, 204, 0.08);
 }
 
-/* Actions */
+.chevron {
+  color: #64748b;
+  transition: transform 0.2s ease;
+}
+
+.chevronRotated {
+  transform: rotate(180deg);
+  color: #0066cc;
+}
+
+/* ── Mega Dropdown ── */
+.dropdownContainer {
+  position: relative;
+}
+
+.dropdownTrigger {
+  cursor: pointer;
+}
+
+.megaDropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  width: 580px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.03);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  pointer-events: none;
+  z-index: 1050;
+}
+
+/* Invisible Hover Bridge — Menghubungkan tombol Layanan dengan kotak dropdown tanpa celah mati */
+.megaDropdown::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background: transparent;
+  display: block;
+}
+
+.megaDropdownOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.megaInner {
+  padding: 24px;
+}
+
+.megaHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.megaTag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #0066cc;
+  text-transform: uppercase;
+}
+
+.megaTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 2px 0 0;
+}
+
+.megaViewAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0066cc;
+  text-decoration: none;
+  background: #eff6ff;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  transition: all 0.15s ease;
+}
+
+.megaViewAll:hover {
+  background: #0066cc;
+  color: #ffffff;
+}
+
+.megaColumns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.megaCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.colHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.colList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.megaItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #475569;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.megaItem:hover {
+  color: #0066cc;
+  background: #f8fafc;
+  padding-left: 14px;
+}
+
+.megaItemActive {
+  color: #0066cc;
+  font-weight: 700;
+  background: #eff6ff;
+}
+
+.itemArrow {
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.megaItem:hover .itemArrow {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+/* ── Actions ── */
 .actions {
   display: flex;
   align-items: center;
@@ -136,7 +311,7 @@
   background: rgba(0, 0, 0, 0.05);
 }
 
-/* Mobile Drawer */
+/* ── Mobile Drawer ── */
 .drawer {
   position: fixed;
   top: 64px;
@@ -145,13 +320,14 @@
   bottom: 0;
   background: #ffffff;
   z-index: 999;
-  padding: 24px 28px 40px;
+  padding: 20px 24px 36px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   transform: translateX(100%);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: -4px 0 24px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
 
 .drawer.drawerOpen {
@@ -172,8 +348,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
-  font-size: 20px;
+  padding: 14px 0;
+  font-size: 17px;
   font-weight: 600;
   color: var(--clr-ink, #1d1d1f);
   text-decoration: none;
@@ -185,12 +361,81 @@
   color: var(--clr-action-blue, #0066cc);
 }
 
+.drawerAccordionBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--clr-ink, #1d1d1f);
+  background: none;
+  border: none;
+  border-bottom: 1px solid #f0f0f4;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+
+.drawerChevron {
+  color: #64748b;
+  transition: transform 0.2s ease;
+}
+
+.drawerChevronRotated {
+  transform: rotate(180deg);
+  color: #0066cc;
+}
+
+.drawerSubMenu {
+  padding: 10px 0 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-left: 2px solid #0066cc;
+  margin: 8px 0 8px 6px;
+  background: #f8fafc;
+  border-radius: 0 10px 10px 0;
+}
+
+.drawerSubItemPrimary {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0066cc;
+  text-decoration: none;
+  padding: 6px 10px;
+}
+
+.drawerCategoryLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px 0;
+}
+
+.drawerSubItem {
+  font-size: 13px;
+  color: #334155;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.drawerSubItem:hover {
+  color: #0066cc;
+  background: #eff6ff;
+}
+
 .drawerCta {
   display: block;
-  padding: 16px 24px;
+  padding: 14px 24px;
   background: #25D366;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   text-align: center;
   border-radius: 9999px;
@@ -215,8 +460,8 @@
   backdrop-filter: blur(4px);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ── Responsive ── */
+@media (max-width: 900px) {
   .links {
     display: none;
   }

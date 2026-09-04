@@ -28,8 +28,8 @@ export default function About() {
     <main style={{ paddingTop: '60px' }}>
       <SEO
         title="Tentang Kami — Profil Perusahaan Kontraktor PT. TOTO SUKSES ABADI"
-        description="Profil resmi PT. TOTO SUKSES ABADI (TOSA) — Perusahaan kontraktor civil engineering dan industrial painting terpercaya di Indonesia dengan komitmen Zero Accident K3 dan standar mutu ISO 9001:2015."
-        keywords="profil PT Toto Sukses Abadi, profil kontraktor tosa, kontraktor terpercaya cikarang, kontraktor standar k3 iso 9001, visi misi kontraktor tosa"
+        description="Profil resmi PT. TOTO SUKSES ABADI (TOSA) — Perusahaan kontraktor civil engineering dan industrial painting terpercaya di Indonesia dengan komitmen Zero Accident K3 dan standar mutu yang konsisten dan berkualitas."
+        keywords="profil PT Toto Sukses Abadi, profil kontraktor tosa, kontraktor terpercaya cikarang, kontraktor komitmen k3 dan standar mutu, visi misi kontraktor tosa"
         structuredData={aboutSchema}
       />
       <CompanyOverview />

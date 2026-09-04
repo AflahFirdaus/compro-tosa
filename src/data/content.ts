@@ -8,11 +8,11 @@ export const COMPANY = {
   tagline: 'Civil Engineering & Industrial Painting Services',
   subTagline: 'PT. TOTO SUKSES ABADI adalah perusahaan yang bergerak dalam bidang Civil Engineering, Industrial Painting, Supplier, dan Contractor. Berkompeten dalam bisnis, konsisten dan loyal dalam berkarya.',
   email: 'sales@totosuksesabadi.co.id',
-  phoneWA: '+62 898-5168-658',
+  phoneWA: '+62 812-1835-1002',
   phoneOffice: '+62 (021) 89282124',
   hours: 'Senin – Jumat, 08.00 – 17.00 WIB',
   address: 'Kawasan Industri, Cikarang, Bekasi, Jawa Barat',
-  waLink: 'https://wa.me/628985168658?text=Halo%20TOSA%2C%20saya%20ingin%20konsultasi%20mengenai%20proyek.',
+  waLink: 'https://wa.me/6281218351002?text=Halo%20Tim%20TOSA%2C%20saya%20ingin%20konsultasi%20mengenai%20proyek.',
   mapsLink: 'https://www.google.com/maps/search/?api=1&query=PT.+Toto+Sukses+Abadi,+Cikarang',
 };
 
@@ -72,6 +72,7 @@ export const TESTIMONIALS = [
 export const CIVIL_SERVICES = [
   {
     step: '01',
+    slug: 'arsitektur-perencanaan-desain-pabrik',
     title: 'Civil Engineering, Architects & Planners',
     desc: 'Perencanaan arsitektur terpadu, master planning tata letak fasilitas pabrik, kalkulasi beban struktural, dan rekayasa sipil bangunan industri.',
     subItems: [
@@ -82,56 +83,7 @@ export const CIVIL_SERVICES = [
   },
   {
     step: '02',
-    title: 'Steel Construction (Konstruksi Baja)',
-    desc: 'Fabrikasi dan ereksi konstruksi rangka baja WF/H-Beam, truss atap, gudang logistik, mezzanine, pipe rack, dan kanopi pabrik berstandar AISC.',
-    subItems: [
-      'Fabrikasi Struktur Baja Berat & WF/H-Beam',
-      'Pembangunan Gudang Logistik & Mezzanine',
-      'Ereksi Rangka Atap & Truss Pabrik',
-    ],
-  },
-  {
-    step: '03',
-    title: 'Mechanical – Electrical (Sistem MEP)',
-    desc: 'Instalasi sistem kelistrikan daya pabrik, panel distribusi MDP/SDP, trafo, instalasi penerangan industri, kabel tray, dan grounding.',
-    subItems: [
-      'Panel Distribusi Listrik & Trafo',
-      'Sistem Grounding & Proteksi Petir',
-      'Instalasi Kelistrikan Daya & Penerangan Pabrik',
-    ],
-  },
-  {
-    step: '04',
-    title: 'Pemipaan (Piping System Industri)',
-    desc: 'Instalasi dan perbaikan sistem perpipaan industri: steam lines tekanan tinggi, compressed air, chilled water, chemical & gas line.',
-    subItems: [
-      'Pipa Steam & Compressed Air Bertekanan',
-      'Chilled Water & Cooling Tower Piping',
-      'Header Pump Room & Repair Flow System',
-    ],
-  },
-  {
-    step: '05',
-    title: 'Ducting & AC Sistem (Industrial HVAC)',
-    desc: 'Pabrikasi dan pemasangan ducting sirkulasi udara, exhaust fan, Air Handling Unit (AHU), dan pendingin AC sistem pabrik.',
-    subItems: [
-      'Pabrikasi & Instalasi Ducting BJLS/PIR',
-      'Industrial HVAC & AC Central Pabrik',
-      'Exhaust System & Air Ventilation',
-    ],
-  },
-  {
-    step: '06',
-    title: 'Boiler Installation & Commissioning',
-    desc: 'Pemasangan, pemipaan header, commissioning, dan pemeliharaan boiler uap industri berkapasitas besar sesuai standar keselamatan ASME & SNI.',
-    subItems: [
-      'Instalasi & Commissioning Boiler Pabrik',
-      'Hydrotest & Uji Sertifikasi Kelayakan',
-      'Pemipaan Steam Header & Valve Kontrol',
-    ],
-  },
-  {
-    step: '07',
+    slug: 'concrete-polishing-liquid-hardener',
     title: 'Concrete Polishing (Poles Beton & Liquid Hardener)',
     desc: 'Poles lantai beton menggunakan teknologi diamond grinding dengan aplikasi chemical liquid hardener untuk lantai kilap, keras, dan bebas debu.',
     subItems: [
@@ -141,7 +93,8 @@ export const CIVIL_SERVICES = [
     ],
   },
   {
-    step: '08',
+    step: '03',
+    slug: 'renovasi-sipil-infrastruktur-pabrik',
     title: 'Civil Renovation & Infrastruktur Pabrik',
     desc: 'Renovasi fasilitas produksi, rigid pavement jalan pabrik, drainase U-ditch, sumur resapan, paving block, cladding, dan loading dock.',
     subItems: [
@@ -150,11 +103,34 @@ export const CIVIL_SERVICES = [
       'Pemasangan Cladding Dinding, Atap & Gypsum',
     ],
   },
+  {
+    step: '04',
+    slug: 'konstruksi-baja-struktur-gudang',
+    title: 'Konstruksi Baja Berat & Struktur Gudang',
+    desc: 'Fabrikasi dan ereksi rangka baja WF/H-beam, perluasan gudang logistik, mezzanine bertingkat, dan pipe rack berstandar AISC.',
+    subItems: [
+      'Struktur Baja WF & H-Beam Mutu Tinggi',
+      'Perluasan Warehouse & Mezzanine Bertingkat',
+      'Sertifikasi Pengelasan & K3 Zero Accident',
+    ],
+  },
+  {
+    step: '05',
+    slug: 'mep-piping-boiler-industri',
+    title: 'Sistem MEP, Piping Bertekanan & Boiler',
+    desc: 'Instalasi panel distribusi listrik pabrik, tata udara ducting HVAC, perpipaan steam/compressed air, dan instalasi boiler standar ASME.',
+    subItems: [
+      'Panel Daya Listrik & Industrial HVAC Ducting',
+      'Perpipaan Steam & Compressed Air Bertekanan',
+      'Instalasi Boiler & Sertifikasi Laik Operasi',
+    ],
+  },
 ];
 
 export const PAINTING_SERVICES = [
   {
     step: '01',
+    slug: 'epoxy-lantai-industri',
     title: 'Epoxy Floor Coating / Epoxy Lantai',
     desc: 'Pelapisan lantai epoxy bermutu tinggi untuk lantai area produksi manufaktur, warehouse logistik, cleanroom farmasi, dan laboratorium.',
     subItems: [
@@ -166,6 +142,7 @@ export const PAINTING_SERVICES = [
   },
   {
     step: '02',
+    slug: 'protective-coating-anti-karat',
     title: 'Protective Coating & Roof Coating',
     desc: 'Sistem pelapisan pelindung anti-karat untuk struktur baja, tangki kimia, cerobong, dan cat penolak panas atap pabrik.',
     subItems: [
@@ -176,16 +153,7 @@ export const PAINTING_SERVICES = [
   },
   {
     step: '03',
-    title: 'Decorative Coating (Pengecatan Dinding)',
-    desc: 'Pengecatan arsitektural dan dekoratif untuk gedung perkantoran pabrik, lobi, koridor, dan dinding fasade luar gedung.',
-    subItems: [
-      'Eksterior: Weather-Shield, Anti Jamur & UV Protection',
-      'Interior: Cat Ramah Lingkungan Low VOC untuk Kantor & Lobi',
-      'Pengecatan Gedung Pabrik & Fasilitas Komersial',
-    ],
-  },
-  {
-    step: '04',
+    slug: 'waterproofing-frp-lining',
     title: 'Waterproofing System (FRP, Membran & Coating)',
     desc: 'Sistem kedap air komprehensif untuk atap dak beton, talang, basement, serta pelapisan FRP lining untuk bak penampungan cairan kimia.',
     subItems: [
@@ -195,23 +163,14 @@ export const PAINTING_SERVICES = [
     ],
   },
   {
-    step: '05',
-    title: 'Road Marking / Marka Jalan & Rambu K3',
-    desc: 'Pengecatan marka jalan pabrik, marka jalur pedestrian pejalan kaki, lintasan forklift/AGV, dan rambu keselamatan kerja standar K3.',
+    step: '04',
+    slug: 'marka-jalan-rambu-k3-pabrik',
+    title: 'Road Marking / Marka Jalan, Rambu K3 & Floor Cleaning',
+    desc: 'Pengecatan marka jalan pabrik, lintasan forklift/AGV, jalur pedestrian pejalan kaki, rambu keselamatan K3, dan deep cleaning lantai.',
     subItems: [
       'Marka Jalur Forklift & Jalur Pejalan Kaki (Pedestrian)',
       'Zonasi Area Aman & Penandaan Standar K3',
-      'Cat Thermoplastic & Cold Plastic Khusus Lalu Lintas Pabrik',
-    ],
-  },
-  {
-    step: '06',
-    title: 'Concrete Floor Wax & Cleaning Floor',
-    desc: 'Layanan pembersihan kerak lantai industri, stripping, pemolesan wax lantai beton/vinyl, dan pemeliharaan kebersihan lantai berkala.',
-    subItems: [
-      'Concrete Floor Waxing & Sealing Proteksi',
-      'Deep Cleaning & Degreasing Kerak Oli Industri',
-      'Program Pemeliharaan Berkala Kebersihan Lantai Pabrik',
+      'Deep Cleaning Kerak Oli & Concrete Floor Waxing',
     ],
   },
 ];
@@ -290,7 +249,7 @@ export const ABOUT_POLICIES = [
     content: {
       visi: 'Menjadi perusahaan jasa konstruksi sipil dan pengecatan industri terdepan di Indonesia yang dikenal atas integritas teknis, standar keselamatan tinggi, dan kepuasan klien berkelanjutan.',
       misi: [
-        'Memberikan layanan konstruksi dan pengecatan industri berkualitas prima sesuai spesifikasi teknis dan standar internasional.',
+        'Memberikan layanan konstruksi dan pengecatan industri berkualitas prima sesuai spesifikasi teknis dan standar mutu yang terukur.',
         'Mengutamakan Keselamatan dan Kesehatan Kerja (K3) serta pelestarian lingkungan dalam setiap tahapan operasional.',
         'Membangun kemitraan strategis jangka panjang dengan pelaku industri manufaktur melalui transparansi dan ketepatan waktu.',
         'Menerapkan inovasi metode kerja, peralatan modern, dan material berstandar mutu tinggi untuk efisiensi maksimal.',
@@ -318,7 +277,7 @@ export const ABOUT_POLICIES = [
     title: 'Kebijakan Mutu',
     color: '#0066cc',
     content: {
-      headline: 'Standar mutu terukur berlandaskan sistem manajemen ISO 9001:2015.',
+      headline: 'Standar mutu terukur yang dijaga melalui prosedur Quality Control pada setiap tahap pengerjaan.',
       points: [
         'Penerapan prosedur Quality Control (QC) bertahap dari penerimaan material hingga serah terima akhir.',
         'Penggunaan material konstruksi dan cat industri original bersertifikat dari pabrikan resmi.',
@@ -379,7 +338,7 @@ export const FAQS = [
   },
   {
     question: 'Bagaimana prosedur survei lokasi dan estimasi Rencana Anggaran Biaya (RAB)?',
-    answer: 'Anda dapat menghubungi tim sales & teknis kami via WhatsApp (+62 898-5168-658) atau formulir online. Tim estimator kami siap melakukan survei lapangan, konsultasi spesifikasi teknis material, dan pembuatan RAB resmi tanpa biaya komitmen awal (Free Consultation & Survey).',
+    answer: 'Anda dapat menghubungi tim sales & teknis kami via WhatsApp (+62 812-1835-1002) atau formulir online. Tim estimator kami siap melakukan survei lapangan, konsultasi spesifikasi teknis material, dan pembuatan RAB resmi tanpa biaya komitmen awal (Free Consultation & Survey).',
   },
   {
     question: 'Apakah hasil pekerjaan dan material yang digunakan memiliki jaminan garansi resmi?',

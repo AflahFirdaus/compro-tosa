@@ -28,7 +28,7 @@ export default function TrustBar() {
             <span className={styles.titleBlue}>PT. TOTO SUKSES ABADI</span>
           </h2>
           <p className={styles.subtitle}>
-            Penerapan standar ISO 9001:2015 dan komitmen keselamatan kerja (K3) Zero Accident di seluruh fasilitas klien.
+            Penerapan standar mutu yang ketat dan komitmen keselamatan kerja (K3) Zero Accident di seluruh fasilitas klien.
           </p>
         </div>
 

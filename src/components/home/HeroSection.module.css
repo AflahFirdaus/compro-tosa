@@ -26,6 +26,7 @@
   filter: brightness(0.8) contrast(1.08) saturate(1.08);
   transform: scale(1.03);
   animation: gentleZoom 18s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 @keyframes gentleZoom {

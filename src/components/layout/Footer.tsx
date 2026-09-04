@@ -13,9 +13,11 @@ export default function Footer() {
           {/* Brand */}
           <div className={styles.brand}>
             <img
-              src="/Logo-tosa.png"
+              src="/Logo-tosa.webp"
               alt={COMPANY.name}
               className={styles.footerLogoImg}
+              width="150"
+              height="42"
             />
             <p className={styles.brandName}>{COMPANY.name}</p>
             <p className={styles.brandDesc}>
@@ -107,7 +109,7 @@ export default function Footer() {
               Kebijakan Privasi
             </Link>
             <span>·</span>
-            <span>Izin Usaha Jasa Konstruksi · SIUJK Terdaftar · ISO 9001:2015</span>
+            <span>Izin Usaha Jasa Konstruksi · SIUJK Terdaftar</span>
           </div>
         </div>
       </div>

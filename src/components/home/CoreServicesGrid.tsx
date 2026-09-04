@@ -66,7 +66,7 @@ export default function CoreServicesGrid() {
             <span className={styles.titleBlue}>Fasilitas Manufaktur Skala Besar</span>
           </h2>
           <p className={styles.subtitle}>
-            Didukung tenaga ahli bersertifikat K3, peralatan modern, dan kepatuhan metode teknis berstandar mutu ISO 9001:2015.
+            Didukung tenaga ahli bersertifikat K3, peralatan modern, dan kepatuhan metode teknis berstandar mutu yang konsisten dan terukur.
           </p>
         </div>
 

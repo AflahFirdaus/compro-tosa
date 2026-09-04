@@ -36,7 +36,7 @@ export default function CompanyOverview() {
 
             <ul className={styles.highlights}>
               {[
-                'Tenaga ahli bersertifikat nasional & internasional',
+                'Tenaga ahli berpengalaman & terlatih di bidang konstruksi industri',
                 'Sistem Manajemen K3 terstandarisasi',
                 'Penggunaan material premium (Jotun, Nippon, Sika)',
                 'Rekam jejak Zero Accident selama operasional',
@@ -58,29 +58,29 @@ export default function CompanyOverview() {
           <div className={styles.overviewAside}>
             <div className={styles.asideCard}>
               <div className={styles.asideCardHeader}>
-                <span className={styles.asideCardIcon}>🏆</span>
-                <h3 className={styles.asideCardTitle}>20+ Tahun Pengalaman</h3>
+                <span className={styles.asideCardIcon}>⭐</span>
+                <h3 className={styles.asideCardTitle}>Rekam Jejak Terpercaya</h3>
               </div>
               <p className={styles.asideCardDesc}>
-                Berdiri sejak 2005, kami telah melewati berbagai siklus ekonomi dan terus tumbuh bersama klien kami.
+                Berdiri sejak 2017, kami berdedikasi menghadirkan layanan berkualitas tinggi yang teruji oleh waktu dan tantangan industri.
               </p>
             </div>
             <div className={styles.asideCard}>
               <div className={styles.asideCardHeader}>
                 <span className={styles.asideCardIcon}>🛡️</span>
-                <h3 className={styles.asideCardTitle}>ISO 9001 Certified</h3>
+                <h3 className={styles.asideCardTitle}>Komitmen Mutu Terstandar</h3>
               </div>
               <p className={styles.asideCardDesc}>
-                Sistem manajemen mutu kami bersertifikat ISO 9001 — jaminan proses yang konsisten dan terukur.
+                Komitmen mutu kami dijaga melalui prosedur Quality Control yang konsisten dan terukur pada setiap tahap pengerjaan.
               </p>
             </div>
             <div className={styles.asideCard}>
               <div className={styles.asideCardHeader}>
-                <span className={styles.asideCardIcon}>📍</span>
-                <h3 className={styles.asideCardTitle}>Nasional Coverage</h3>
+                <span className={styles.asideCardIcon}>🌐</span>
+                <h3 className={styles.asideCardTitle}>Jangkauan Kerja Luas</h3>
               </div>
               <p className={styles.asideCardDesc}>
-                Beroperasi di Jawa, Sumatera, Kalimantan, dan Sulawesi. Tim kami siap bergerak ke mana klien membutuhkan.
+                Dengan jangkauan kerja yang mencakup Jawa, Sumatera, Kalimantan, hingga Sulawesi, tim kami siap hadir langsung di mana pun lokasi proyek Anda.
               </p>
             </div>
           </div>

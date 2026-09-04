@@ -1,12 +1,7 @@
-// Helper to resolve images from asset_porto using Vite's import.meta.glob
-const imageModules = import.meta.glob<string>('../assets/asset_porto/*.png', {
-  eager: true,
-  import: 'default',
-});
-
+// Gambar disimpan di /public/asset_porto/ — menggunakan format WebP ultra ringan (~30KB)
 function getImg(filename: string): string {
-  const path = `../assets/asset_porto/${filename}`;
-  return imageModules[path] || '';
+  const webpName = filename.replace(/\.png$/i, '.webp');
+  return `/asset_porto/${webpName}`;
 }
 
 export interface PortfolioItem {

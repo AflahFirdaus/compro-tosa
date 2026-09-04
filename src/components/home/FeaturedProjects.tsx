@@ -37,6 +37,9 @@ export default function FeaturedProjects() {
                   alt={item.title}
                   className={styles.projectImage}
                   loading="lazy"
+                  decoding="async"
+                  width="300"
+                  height="170"
                 />
                 <span className={styles.badge}>{item.category === 'Civil Engineering' ? 'Civil' : 'Painting'}</span>
               </div>

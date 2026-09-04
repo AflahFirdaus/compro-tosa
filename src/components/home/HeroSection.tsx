@@ -3,7 +3,8 @@ import { ArrowRight, ChevronDown, CheckCircle, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './HeroSection.module.css';
 
-const HERO_IMG = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop';
+// Gambar hero WebP — LCP cepat & di-preload
+const HERO_IMG = '/HeroSec.webp';
 
 export default function HeroSection() {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -29,6 +30,10 @@ export default function HeroSection() {
           src={HERO_IMG}
           alt="Civil Engineering & Industrial Painting Facility - PT Toto Sukses Abadi"
           className={styles.bgImage}
+          fetchPriority="high"
+          decoding="async"
+          width="1400"
+          height="800"
         />
         <div className={styles.lightOverlay} />
       </div>
@@ -38,17 +43,17 @@ export default function HeroSection() {
         <div ref={contentRef} className={styles.content}>
           {/* Eyebrow badge */}
           <div className={styles.eyebrow}>
-            ISO 9001:2015 &amp; ZERO ACCIDENT K3 CERTIFIED
+            ZERO ACCIDENT &amp; K3 CERTIFIED
           </div>
 
           {/* Main Headline */}
           <h1 className={styles.title}>
-            Solusi Kontraktor Pabrik, Civil Engineering &amp; Industrial Painting Terpercaya
+            Kontraktor Pabrik, Civil Engineering &amp; Industrial Painting Terpercaya
           </h1>
 
           {/* Concise Subtitle */}
           <p className={styles.subtitle}>
-            PT. TOTO SUKSES ABADI adalah mitra kontraktor spesialis fasilitas manufaktur di Indonesia. Berkompeten, disiplin mutu ISO, dan konsisten menghadirkan standar pengerjaan bergaransi resmi.
+            PT. TOTO SUKSES ABADI adalah mitra kontraktor spesialis fasilitas manufaktur di Indonesia. Berkompeten, disiplin mutu yang solid, dan konsisten menghadirkan standar pengerjaan bergaransi resmi.
           </p>
 
           {/* Clean Action Buttons */}

@@ -81,7 +81,7 @@ export default function ContactInfo() {
           </div>
           <div className={styles.badgeItem}>
             <Award size={18} className={styles.badgeIcon} />
-            <span>ISO 9001:2015 Compliant</span>
+            <span>Standar Mutu &amp; Quality Control</span>
           </div>
         </div>
       </div>

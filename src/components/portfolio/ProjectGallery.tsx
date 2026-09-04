@@ -228,7 +228,7 @@ export default function ProjectGallery() {
                     Foto {activeImageIndex + 1} dari {selectedProject.images.length} • PT. TOTO SUKSES ABADI
                   </span>
                   <a
-                    href={`${COMPANY.waLink}&text=Halo%20TOSA%2C%20saya%20tertarik%20konsultasi%20mengenai%20layanan%20${encodeURIComponent(selectedProject.title)}`}
+                    href={`${COMPANY.waLink}&text=Halo%20Tim%20TOSA%2C%20saya%20tertarik%20konsultasi%20mengenai%20layanan%20${encodeURIComponent(selectedProject.title)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.modalCtaBtn}
