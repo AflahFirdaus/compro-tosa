@@ -1,0 +1,280 @@
+.skeletonContainer {
+  padding-top: 64px;
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Base Shimmer Bone Styling ── */
+.bone {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Dark Hero Shimmer Wave */
+.heroSkeleton .bone {
+  background: #1e293b;
+}
+
+.heroSkeleton .bone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 41, 59, 0) 0%,
+    rgba(51, 65, 85, 0.45) 50%,
+    rgba(30, 41, 59, 0) 100%
+  );
+  animation: shimmerDark 1.5s infinite linear;
+}
+
+/* Light Content Shimmer Wave */
+.contentSkeleton .bone {
+  background: #e2e8f0;
+}
+
+.contentSkeleton .bone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    rgba(226, 232, 240, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(226, 232, 240, 0) 100%
+  );
+  animation: shimmerLight 1.5s infinite linear;
+}
+
+@keyframes shimmerDark {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes shimmerLight {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ── 1. Hero Skeleton ── */
+.heroSkeleton {
+  background: #0f172a;
+  padding: 56px 0 72px;
+}
+
+.breadcrumbSkeleton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.boneShort {
+  width: 60px;
+  height: 14px;
+}
+
+.boneDot {
+  width: 12px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.boneMedium {
+  width: 120px;
+  height: 14px;
+}
+
+.boneBadge {
+  width: 180px;
+  height: 26px;
+  border-radius: 9999px;
+  margin-bottom: 24px;
+}
+
+.boneTitleLg {
+  width: 85%;
+  height: 38px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+}
+
+.boneTitleMd {
+  width: 60%;
+  height: 38px;
+  margin-bottom: 22px;
+  border-radius: 10px;
+}
+
+.boneSubtitle {
+  width: 90%;
+  height: 16px;
+  margin-bottom: 8px;
+}
+
+.boneSubtitleShort {
+  width: 50%;
+  height: 16px;
+  margin-bottom: 34px;
+}
+
+.buttonRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.boneButtonPrimary {
+  width: 230px;
+  height: 48px;
+  border-radius: 9999px;
+}
+
+.boneButtonSecondary {
+  width: 190px;
+  height: 48px;
+  border-radius: 9999px;
+}
+
+.trustRow {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+}
+
+.boneTrustItem {
+  width: 160px;
+  height: 16px;
+}
+
+/* ── 2. Content Grid Skeleton ── */
+.contentSkeleton {
+  padding: 80px 0;
+  background: #ffffff;
+  flex-grow: 1;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.boneBadgeLight {
+  width: 160px;
+  height: 24px;
+  border-radius: 9999px;
+  margin-bottom: 14px;
+}
+
+.boneHeading {
+  width: 380px;
+  height: 32px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.boneSubheading {
+  width: 520px;
+  height: 16px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cardSkeleton {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.boneCardBadge {
+  width: 90px;
+  height: 20px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+}
+
+.boneCardTitle {
+  width: 80%;
+  height: 22px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.boneCardText {
+  width: 100%;
+  height: 14px;
+  margin-bottom: 8px;
+}
+
+.boneCardTextShort {
+  width: 65%;
+  height: 14px;
+  margin-bottom: 24px;
+}
+
+.cardFooter {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.boneCardButton {
+  width: 140px;
+  height: 28px;
+  border-radius: 8px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+  .boneTitleLg,
+  .boneTitleMd,
+  .boneHeading,
+  .boneSubheading {
+    width: 100%;
+  }
+  .buttonRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .boneButtonPrimary,
+  .boneButtonSecondary {
+    width: 100%;
+  }
+}
