@@ -6,6 +6,23 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [
     react(),
-    babel({ presets: [reactCompilerPreset()] })
+    babel({ presets: [reactCompilerPreset()] }),
   ],
+  build: {
+    // Inlining aset < 4KB sebagai base64 (ikon kecil, dll.)
+    assetsInlineLimit: 4096,
+    rollupOptions: {
+      output: {
+        // Pisahkan vendor besar ke chunk terpisah agar browser cache lebih efisien
+        manualChunks(id: string) {
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom') || id.includes('node_modules/react-router')) {
+            return 'vendor-react';
+          }
+          if (id.includes('node_modules/lucide-react')) {
+            return 'vendor-icons';
+          }
+        },
+      },
+    },
+  },
 })

@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- Google tag (gtag.js) - Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NB4XK3D74"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2NB4XK3D74');
+    </script>
+    
     <!-- Primary SEO Metadata -->
     <title>Jasa Kontraktor Pabrik, Civil Engineering & Industrial Painting — PT. TOTO SUKSES ABADI</title>
     <meta name="title" content="Jasa Kontraktor Pabrik, Civil Engineering & Industrial Painting — PT. TOTO SUKSES ABADI" />
@@ -48,10 +58,15 @@
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#0066cc" />
 
+    <!-- Hero image preload — prioritas tinggi WebP agar LCP secepat kilat -->
+    <link rel="preload" as="image" href="/HeroSec.webp" fetchpriority="high" type="image/webp" />
+
     <!-- Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+    <!-- Non-blocking font load: preload as style, swap to stylesheet on load -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
 
     <!-- JSON-LD Structured Data for Google Search Rich Results -->
     <script type="application/ld+json">
@@ -84,7 +99,7 @@
           },
           "image": "https://totosuksesabadi.co.id/Logo-tosa.png",
           "description": "Perusahaan jasa kontraktor spesialis Civil Engineering, Industrial Painting, Epoxy Floor Coating, Steel Construction, dan MEP untuk fasilitas pabrik manufaktur di Cikarang, Bekasi, Karawang, dan seluruh Indonesia.",
-          "telephone": "+628985168658",
+          "telephone": "+6281218351002",
           "email": "sales@totosuksesabadi.co.id",
           "priceRange": "$$",
           "currenciesAccepted": "IDR",
@@ -109,7 +124,7 @@
           "contactPoint": [
             {
               "@type": "ContactPoint",
-              "telephone": "+628985168658",
+              "telephone": "+6281218351002",
               "contactType": "sales",
               "areaServed": "ID",
               "availableLanguage": ["Indonesian", "English"]
@@ -145,36 +160,92 @@
             { "@type": "Place", "name": "Kawasan Industri KIIC" }
           ],
           "knowsAbout": [
-            "Jasa Kontraktor Pabrik",
-            "Civil Engineering",
-            "Industrial Painting",
-            "Epoxy Flooring",
-            "Steel Construction",
-            "Protective Coating",
-            "MEP System",
-            "Piping System",
-            "Waterproofing",
-            "Boiler Installation",
-            "Concrete Polishing"
+            "Civil Engineering, Architects & Planners",
+            "Concrete Polishing (Poles Beton & Liquid Floor Hardener)",
+            "Civil Renovation & Infrastruktur Pabrik",
+            "Epoxy Floor Coating / Epoxy Lantai Industri (Self-Leveling & Food Grade GMP)",
+            "Protective Coating Anti-Karat & Roof Coating Peredam Panas",
+            "Decorative Coating (Pengecatan Eksterior Weather-Shield & Interior Low VOC)",
+            "Waterproofing System (FRP Lining Bak Kimia & Membran Bakar)",
+            "Road Marking / Marka Jalan Pabrik, Jalur Forklift & Rambu K3",
+            "Concrete Floor Wax & Cleaning Floor Pabrik",
+            "Steel Construction & Structure Pabrik",
+            "Sistem MEP, Piping System & Boiler Installation"
           ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Layanan Jasa Kontraktor & Industrial Painting",
+            "name": "Layanan Lengkap Jasa Kontraktor & Industrial Painting TOSA",
             "itemListElement": [
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Jasa Kontraktor Civil Engineering & Steel Construction",
-                  "description": "Konstruksi baja, renovasi pabrik, MEP, piping system, boiler, dan concrete polishing."
+                  "name": "Civil Engineering, Architects & Planners",
+                  "description": "Perencanaan arsitektur terpadu, master planning tata letak fasilitas pabrik, kalkulasi beban struktural, dan rekayasa sipil bangunan industri."
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Jasa Industrial Painting & Epoxy Floor Coating",
-                  "description": "Aplikasi pelapisan epoxy lantai, protective anti-karat, intumescent fireproofing, dan waterproofing."
+                  "name": "Concrete Polishing (Poles Beton & Liquid Hardener)",
+                  "description": "Poles lantai beton diamond grinding bertingkat dengan chemical liquid hardener untuk lantai glossy, tahan beban forklift, dan bebas debu semen."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Civil Renovation & Infrastruktur Pabrik",
+                  "description": "Renovasi fasilitas produksi, rigid pavement jalan pabrik, drainase U-ditch, sumur resapan, paving block, cladding, dan perbaikan loading dock."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Epoxy Floor Coating / Epoxy Lantai Industri",
+                  "description": "Aplikasi pelapisan epoxy lantai roll system, self-leveling, heavy duty mortar, food grade standar GMP/HACCP, anti-static ESD, dan chemical resistance."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Protective Coating & Roof Coating",
+                  "description": "Sistem pelapisan pelindung anti-karat struktur baja, tangki kimia, cerobong, roof coating penolak panas, dan intumescent cat tahan api pasif."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Decorative Coating (Pengecatan Dinding Gedung)",
+                  "description": "Pengecatan eksterior weather-shield anti jamur & UV, serta interior cat ramah lingkungan Low VOC untuk kantor, lobi, dan koridor pabrik."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Waterproofing System (FRP, Membran & Coating)",
+                  "description": "Sistem kedap air atap dak beton, talang, basement, serta FRP lining bak penampungan cairan kimia dan kolam STP/WWTP."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Road Marking / Marka Jalan & Rambu K3 Pabrik",
+                  "description": "Pengecatan marka lantai jalur pedestrian, jalur forklift/AGV, zonasi area aman, dan rambu keselamatan kerja standar K3 industri."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Concrete Floor Wax & Cleaning Floor Pabrik",
+                  "description": "Pembersihan kerak lantai industri, stripping, waxing lantai beton/vinyl, degreasing kerak oli, dan pemeliharaan kebersihan lantai berkala."
                 }
               }
             ]
@@ -185,7 +256,36 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!--
+        Inline skeleton shimmer untuk FCP — tampil SEBELUM JS bundle selesai diparse.
+        React akan otomatis me-replace konten ini saat mount.
+      -->
+      <style>
+        #app-shell{position:fixed;inset:0;z-index:9999;background:#0f172a;display:flex;flex-direction:column;overflow:hidden;font-family:system-ui,-apple-system,sans-serif;}
+        #app-shell-nav{height:64px;background:rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.1);padding:0 32px;display:flex;align-items:center;justify-content:space-between;}
+        #app-shell-body{max-width:1200px;width:100%;margin:0 auto;padding:64px 24px;display:flex;flex-direction:column;}
+        ._sk{background:#1e293b;border-radius:8px;position:relative;overflow:hidden;}
+        ._sk::after{content:'';position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,rgba(30,41,59,0) 0%,rgba(51,65,85,.5) 50%,rgba(30,41,59,0) 100%);animation:_sh 1.5s infinite linear;}
+        @keyframes _sh{100%{transform:translateX(100%)}}
+      </style>
+      <div id="app-shell" aria-hidden="true">
+        <div id="app-shell-nav">
+          <div class="_sk" style="width:140px;height:32px;border-radius:6px;"></div>
+          <div class="_sk" style="width:160px;height:36px;border-radius:9999px;"></div>
+        </div>
+        <div id="app-shell-body">
+          <div class="_sk" style="width:180px;height:24px;border-radius:9999px;margin-bottom:24px;"></div>
+          <div class="_sk" style="width:80%;height:44px;border-radius:10px;margin-bottom:14px;"></div>
+          <div class="_sk" style="width:55%;height:44px;border-radius:10px;margin-bottom:24px;"></div>
+          <div class="_sk" style="width:70%;height:18px;margin-bottom:32px;"></div>
+          <div style="display:flex;gap:16px;">
+            <div class="_sk" style="width:220px;height:48px;border-radius:9999px;"></div>
+            <div class="_sk" style="width:180px;height:48px;border-radius:9999px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
